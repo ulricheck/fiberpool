@@ -26,10 +26,7 @@ class fiberpool_Conan(ConanFile):
 
     def package(self):
         self.copy(pattern="*.h", dst="include", src="include")
-        self.copy(pattern="*.so", dst="lib", keep_path=False)
-        self.copy(pattern="*.lib", dst="lib", keep_path=False)
-        self.copy(pattern="*.dll", dst="bin", keep_path=False)
 
-    def package_info(self):
-        self.cpp_info.libs = tools.collect_libs(self)
+    def package_id(self):
+        self.info.header_only()
 
