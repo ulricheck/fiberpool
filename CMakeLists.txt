@@ -5,6 +5,9 @@ set(PROJECT_NAME
 
 project(${PROJECT_NAME})
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Debug)
 
@@ -17,7 +20,7 @@ add_executable(
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE 
-        Boost::fiber
+        CONAN_PKG::Boost
         pthread)
 
 include(CTest)
