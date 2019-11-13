@@ -8,6 +8,7 @@ class fiberpool_Conan(ConanFile):
     exports_sources = "examples*", "include*", "tests*", "CMakeLists.txt"
 
     description="C++17 Fiberpool"
+    url = "https://github.com/ulricheck/fiberpool.git"
 
     default_options = {
         "Boost:without_fiber": False,
