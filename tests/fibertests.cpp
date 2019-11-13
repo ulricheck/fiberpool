@@ -14,7 +14,7 @@ using boost::fibers::channel_op_status;
 
 TEST_CASE("No of threads and fibers", "[default-pool]") 
 {
-    auto no_of_threads = no_of_defualt_threads();
+    auto no_of_threads = no_of_default_threads();
 
 	SECTION("Initial")
 	{

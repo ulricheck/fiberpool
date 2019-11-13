@@ -10,7 +10,7 @@ namespace FiberPool
 {
 
 inline auto 
-no_of_defualt_threads()
+no_of_default_threads()
 {
     return std::max(std::thread::hardware_concurrency(), 2u) - 1u;
 }
@@ -142,7 +142,7 @@ public:
         = use_work_steal;
 
     FiberPool()
-        : FiberPool {no_of_defualt_threads()}
+        : FiberPool {no_of_default_threads()}
     {}
 
     FiberPool(
