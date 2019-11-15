@@ -25,7 +25,7 @@ class fiberpool_Conan(ConanFile):
         cmake.build()
 
     def package(self):
-        self.copy(pattern="*.h", dst="include", src="include")
+        self.copy(pattern="*.hpp", dst="include", src="include")
 
     def package_id(self):
         self.info.header_only()
