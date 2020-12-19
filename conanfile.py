@@ -15,7 +15,7 @@ class fiberpool_Conan(ConanFile):
     }
 
     requires = (
-        "Boost/1.70.0@camposs/stable",
+        "Boost/1.72.0@camposs/stable",
         )
 
 

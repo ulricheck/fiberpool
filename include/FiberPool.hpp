@@ -3,8 +3,14 @@
 
 #pragma once
 
-#include <boost/fiber/all.hpp>
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#endif // _WIN321
 
+#include <boost/fiber/all.hpp>
+#include <optional>
 
 namespace FiberPool {
 
