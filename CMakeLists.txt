@@ -20,8 +20,13 @@ add_executable(
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE 
-        CONAN_PKG::Boost
+        CONAN_PKG::Boost)
+
+IF(UNIX)
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE 
         pthread)
+ENDIF()
 
 include(CTest)
 
