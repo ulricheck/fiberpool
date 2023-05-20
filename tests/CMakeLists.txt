@@ -11,7 +11,8 @@ add_executable(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE 
-        CONAN_PKG::Boost
+        Boost::fiber
+        Boost::thread
         pthread)
 
 add_test(fibertest ${PROJECT_NAME})
